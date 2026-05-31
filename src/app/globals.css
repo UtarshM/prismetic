@@ -1,9 +1,62 @@
 @import "tailwindcss";
 
 :root {
-  --gold: #d4af37;
+  --bg: #f7f8fb;
+  --surface: #ffffff;
+  --surface-muted: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --stroke: #dbe2ea;
+  --brand-gold: #c7952f;
+  --brand-gold-strong: #9a6f1e;
+  --shadow-soft: 0 10px 24px rgba(15, 23, 42, 0.05);
+  --shadow-elevated: 0 20px 48px rgba(15, 23, 42, 0.1);
 }
 
-body { font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif; }
+html,
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
 
-.glass { background: rgba(255, 255, 255, 0.92); border: 1px solid rgba(148, 163, 184, 0.28); backdrop-filter: blur(16px); }
+.section-shell {
+  margin-inline: auto;
+  max-width: 80rem;
+  padding-inline: 1rem;
+  padding-block: 3rem;
+}
+
+@media (min-width: 640px) {
+  .section-shell {
+    padding-inline: 1.5rem;
+    padding-block: 4rem;
+  }
+}
+
+.premium-card {
+  border: 1px solid var(--stroke);
+  border-radius: 1rem;
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.premium-chip {
+  border: 1px solid color-mix(in srgb, var(--brand-gold), white 45%);
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--brand-gold), white 90%);
+  color: var(--brand-gold-strong);
+}
+
+.premium-cta {
+  border-radius: 9999px;
+  background: var(--brand-gold);
+  color: #fff;
+  font-weight: 600;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  backdrop-filter: blur(16px);
+}

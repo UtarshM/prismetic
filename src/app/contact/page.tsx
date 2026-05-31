@@ -1,11 +1,11 @@
 import { Hero, SectionTitle } from "@/components/sections";
-import { company, migrated } from "@/lib/site-data";
+import { company, migrated, machineRegistry } from "@/lib/site-data";
 
 export default function ContactPage() {
   return (
     <div>
       <Hero title="Contact Us" subtitle="Premium enterprise contact center with office and factory locations, maps and dedicated forms." />
-      <section className="mx-auto max-w-7xl px-6 py-16 grid gap-10 md:grid-cols-2">
+      <section className="section-shell grid gap-10 md:grid-cols-2">
         <div>
           <SectionTitle title="Office Locations" />
           <p className="text-slate-600">Head Office: {company.headOffice}</p>
@@ -21,35 +21,42 @@ export default function ContactPage() {
         <div className="space-y-8">
           <div>
             <SectionTitle title="General Inquiry" />
-            <form className="grid gap-3">
+            <form className="premium-card grid gap-3 rounded-2xl p-4">
               <input className="rounded-xl border border-slate-300 bg-white p-3" placeholder="Company Name" />
               <input className="rounded-xl border border-slate-300 bg-white p-3" placeholder="Email" />
+              <select className="rounded-xl border border-slate-300 bg-white p-3" defaultValue="">
+                <option value="" disabled>Select machine of interest</option>
+                {machineRegistry.map((m) => <option key={m.id} value={m.title}>{m.title}</option>)}
+              </select>
               <textarea className="rounded-xl border border-slate-300 bg-white p-3" placeholder="Message" />
-              <button className="w-fit rounded-xl bg-amber-300 px-4 py-2 text-black">Submit</button>
+              <button className="premium-cta w-fit px-4 py-2">Submit</button>
             </form>
           </div>
 
           <div>
             <SectionTitle title="Request Quote" />
-            <a href="/request-quote" className="inline-block rounded-xl border border-amber-300 px-4 py-2 text-amber-300">Open Multi-step Quote Form</a>
+            <a href="/request-quote" className="inline-block rounded-xl border border-amber-300 px-4 py-2 text-amber-700">Open Multi-step Quote Form</a>
           </div>
 
           <div>
             <SectionTitle title="Service Request" />
-            <form className="grid gap-3">
-              <input className="rounded-xl border border-slate-300 bg-white p-3" placeholder="Machine / Line" />
+            <form className="premium-card grid gap-3 rounded-2xl p-4">
+              <select className="rounded-xl border border-slate-300 bg-white p-3" defaultValue="">
+                <option value="" disabled>Select machine / line</option>
+                {machineRegistry.map((m) => <option key={m.id} value={m.title}>{m.title}</option>)}
+              </select>
               <input className="rounded-xl border border-slate-300 bg-white p-3" placeholder="Location" />
               <textarea className="rounded-xl border border-slate-300 bg-white p-3" placeholder="Service Issue" />
-              <button className="w-fit rounded-xl bg-amber-300 px-4 py-2 text-black">Raise Service Request</button>
+              <button className="premium-cta w-fit px-4 py-2">Raise Service Request</button>
             </form>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-20">
+      <section className="section-shell pt-0">
         <SectionTitle title="Extracted Contact Information" />
         <div className="grid gap-3 md:grid-cols-2">
-          {migrated.contactCards.map((c) => <div key={c.text} className="rounded-xl border border-slate-200 bg-white p-4 text-slate-600"><p className="text-amber-300">{c.title}</p><p>{c.text}</p></div>)}
+          {migrated.contactCards.map((c) => <div key={c.text} className="premium-card rounded-xl p-4 text-slate-600"><p className="text-amber-700">{c.title}</p><p>{c.text}</p></div>)}
         </div>
       </section>
     </div>
