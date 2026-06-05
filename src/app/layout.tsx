@@ -1,7 +1,20 @@
 import type { Metadata } from "next";
+import { Plus_Jakarta_Sans, Orbitron } from "next/font/google";
 import "./globals.css";
 import { SiteShell } from "@/components/site-shell";
 import { LenisProvider } from "@/components/lenis-provider";
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  weight: ["300", "400", "500", "600", "700", "800"],
+});
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  variable: "--font-tech",
+  weight: ["400", "500", "600", "700", "800"],
+});
 
 export const metadata: Metadata = {
   title: { default: "Prismtec | Industrial Filling & Packaging", template: "%s | Prismtec" },
@@ -25,8 +38,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     url: "https://www.prismtec.com",
   };
   return (
-    <html lang="en">
-      <body className="bg-slate-50 text-slate-900 antialiased">
+    <html lang="en" className={`${plusJakartaSans.variable} ${orbitron.variable}`}>
+      <body className="bg-white text-slate-900 antialiased selection:bg-amber-500/20 selection:text-slate-900">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ldJson) }} />
         <LenisProvider />
         <SiteShell>{children}</SiteShell>
@@ -34,3 +47,4 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     </html>
   );
 }
+
