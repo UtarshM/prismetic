@@ -39,7 +39,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   };
   return (
     <html lang="en" className={`${plusJakartaSans.variable} ${orbitron.variable}`}>
-      <body className="bg-white text-slate-900 antialiased selection:bg-amber-500/20 selection:text-slate-900">
+      <body className="bg-white text-slate-900 antialiased selection:bg-blue-600/20 selection:text-slate-900">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ldJson) }} />
         <LenisProvider />
         <SiteShell>{children}</SiteShell>

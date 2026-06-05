@@ -57,7 +57,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 key={href} 
                 href={href} 
                 className={`nav-link text-slate-600 hover:text-slate-900 transition-colors py-1 ${
-                  pathname === href ? "active font-bold text-amber-700" : ""
+                  pathname === href ? "active font-bold text-blue-700" : ""
                 }`}
               >
                 {label}
@@ -68,7 +68,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               <button
                 type="button"
                 className={`inline-flex items-center gap-1.5 py-1 transition-colors hover:text-slate-900 ${
-                  pathname.startsWith("/products") ? "font-bold text-amber-700" : "text-slate-600"
+                  pathname.startsWith("/products") ? "font-bold text-blue-700" : "text-slate-600"
                 }`}
                 onClick={() => setProductsOpen((prev) => !prev)}
               >
@@ -86,12 +86,12 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                   >
                     <div className="mb-4 flex items-center justify-between border-b border-slate-100 pb-3">
                       <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-slate-500 font-mono">
-                        <Layers size={14} className="text-amber-600" />
+                        <Layers size={14} className="text-blue-600" />
                         Machine Navigator
                       </div>
                       <Link 
                         href="/products" 
-                        className="text-xs font-semibold text-amber-600 hover:text-amber-700 flex items-center gap-1 group"
+                        className="text-xs font-semibold text-blue-600 hover:text-blue-700 flex items-center gap-1 group"
                         onClick={() => setProductsOpen(false)}
                       >
                         View All Products
@@ -100,10 +100,10 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       {groupedMachines.map((group) => (
-                        <div key={group.slug} className="rounded-xl border border-slate-100 bg-slate-50/30 p-4 transition-all hover:border-amber-500/10 hover:bg-slate-50/70">
+                        <div key={group.slug} className="rounded-xl border border-slate-100 bg-slate-50/30 p-4 transition-all hover:border-blue-500/10 hover:bg-slate-50/70">
                           <Link 
                             href={`/products/${group.slug}`} 
-                            className="text-sm font-semibold text-slate-800 hover:text-amber-600 transition-colors"
+                            className="text-sm font-semibold text-slate-800 hover:text-blue-600 transition-colors"
                             onClick={() => setProductsOpen(false)}
                           >
                             {group.title}
@@ -152,7 +152,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                     href={href} 
                     onClick={() => setMenuOpen(false)} 
                     className={`rounded-xl px-4 py-2.5 text-sm transition-colors ${
-                      pathname === href ? "bg-amber-500/5 font-bold text-amber-700" : "text-slate-600 hover:bg-slate-50"
+                      pathname === href ? "bg-blue-500/5 font-bold text-blue-700" : "text-slate-600 hover:bg-slate-50"
                     }`}
                   >
                     {label}
@@ -162,7 +162,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                   href="/products" 
                   onClick={() => setMenuOpen(false)} 
                   className={`rounded-xl px-4 py-2.5 text-sm transition-colors ${
-                    pathname.startsWith("/products") ? "bg-amber-500/5 font-bold text-amber-700" : "text-slate-600 hover:bg-slate-50"
+                    pathname.startsWith("/products") ? "bg-blue-500/5 font-bold text-blue-700" : "text-slate-600 hover:bg-slate-50"
                   }`}
                 >
                   All Products
@@ -184,7 +184,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                           <Link 
                             href={`/products/${group.slug}`} 
                             onClick={() => setMenuOpen(false)} 
-                            className="text-xs font-semibold text-slate-600 hover:text-amber-600"
+                            className="text-xs font-semibold text-slate-600 hover:text-blue-600"
                           >
                             {group.title}
                           </Link>
@@ -245,13 +245,13 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <div className="space-y-4">
               <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-800 font-mono">Get in Touch</h4>
               <div className="space-y-2.5">
-                <a href={`mailto:${company.email}`} className="flex items-center gap-2 text-xs text-slate-500 hover:text-amber-600 transition-colors">
-                  <Mail size={12} className="text-amber-600" />
+                <a href={`mailto:${company.email}`} className="flex items-center gap-2 text-xs text-slate-500 hover:text-blue-600 transition-colors">
+                  <Mail size={12} className="text-blue-600" />
                   {company.email}
                 </a>
                 {company.phones.map((phone) => (
-                  <a key={phone} href={`tel:${phone}`} className="flex items-center gap-2 text-xs text-slate-500 hover:text-amber-600 transition-colors">
-                    <Phone size={12} className="text-amber-600" />
+                  <a key={phone} href={`tel:${phone}`} className="flex items-center gap-2 text-xs text-slate-500 hover:text-blue-600 transition-colors">
+                    <Phone size={12} className="text-blue-600" />
                     {phone}
                   </a>
                 ))}
@@ -264,9 +264,9 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               &copy; {new Date().getFullYear()} {company.name}. All Rights Reserved.
             </p>
             <div className="flex gap-4 text-[11px] font-mono text-slate-400">
-              <Link href="/products" className="hover:text-amber-600 transition-colors">Products</Link>
+              <Link href="/products" className="hover:text-blue-600 transition-colors">Products</Link>
               <span>&middot;</span>
-              <Link href="/contact" className="hover:text-amber-600 transition-colors">Inquire</Link>
+              <Link href="/contact" className="hover:text-blue-600 transition-colors">Inquire</Link>
             </div>
           </div>
         </div>

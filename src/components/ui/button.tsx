@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 const buttonVariants = cva("inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium transition", {
   variants: {
     variant: {
-      default: "bg-amber-300 text-black hover:bg-amber-200",
+      default: "bg-blue-600 text-white hover:bg-blue-700",
       outline: "border border-slate-300 text-slate-900 hover:bg-slate-100",
     },
   },

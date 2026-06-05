@@ -35,7 +35,7 @@ export default function ContactPage() {
 
           <div>
             <SectionTitle title="Request Quote" />
-            <a href="/request-quote" className="inline-block rounded-xl border border-amber-300 px-4 py-2 text-amber-700">Open Multi-step Quote Form</a>
+            <a href="/request-quote" className="inline-block rounded-xl border border-blue-600 px-4 py-2 text-blue-700">Open Multi-step Quote Form</a>
           </div>
 
           <div>
@@ -56,7 +56,7 @@ export default function ContactPage() {
       <section className="section-shell pt-0">
         <SectionTitle title="Extracted Contact Information" />
         <div className="grid gap-3 md:grid-cols-2">
-          {migrated.contactCards.map((c) => <div key={c.text} className="premium-card rounded-xl p-4 text-slate-600"><p className="text-amber-700">{c.title}</p><p>{c.text}</p></div>)}
+          {migrated.contactCards.map((c) => <div key={c.text} className="premium-card rounded-xl p-4 text-slate-600"><p className="text-blue-700">{c.title}</p><p>{c.text}</p></div>)}
         </div>
       </section>
     </div>

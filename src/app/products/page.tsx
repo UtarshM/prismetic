@@ -50,7 +50,7 @@ export default function ProductsPage() {
                     </div>
                   ))}
                 </div>
-                <h3 className="text-base font-bold text-slate-800 group-hover:text-amber-700 transition-colors">
+                <h3 className="text-base font-bold text-slate-800 group-hover:text-blue-700 transition-colors">
                   {category.title}
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-500 line-clamp-3">
@@ -58,7 +58,7 @@ export default function ProductsPage() {
                 </p>
               </div>
               <div>
-                <p className="mt-4 text-[10px] font-mono font-bold text-amber-600 uppercase tracking-wider">
+                <p className="mt-4 text-[10px] font-mono font-bold text-blue-600 uppercase tracking-wider">
                   {category.items.length} Machine Models &rarr;
                 </p>
               </div>
@@ -94,7 +94,7 @@ export default function ProductsPage() {
           <input 
             value={query} 
             onChange={(e) => setQuery(e.target.value)} 
-            className="w-full rounded-xl border border-slate-200 bg-slate-50/60 p-3 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-amber-500/40 focus:bg-white transition-colors" 
+            className="w-full rounded-xl border border-slate-200 bg-slate-50/60 p-3 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-blue-500/40 focus:bg-white transition-colors" 
             placeholder="Search any machine by name or summary" 
           />
         </div>
@@ -120,7 +120,7 @@ export default function ProductsPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/5 to-transparent pointer-events-none" />
                 </div>
-                <p className="mt-3.5 text-sm font-bold text-slate-800 group-hover:text-amber-700 transition-colors line-clamp-1">
+                <p className="mt-3.5 text-sm font-bold text-slate-800 group-hover:text-blue-700 transition-colors line-clamp-1">
                   {machine.title}
                 </p>
               </div>
@@ -137,11 +137,11 @@ export default function ProductsPage() {
         <div className="space-y-16">
           {productsByCategory.map((category) => (
             <div key={category.slug} className="space-y-6">
-              <div className="flex items-center justify-between gap-3 border-l-2 border-amber-600 pl-3">
+              <div className="flex items-center justify-between gap-3 border-l-2 border-blue-600 pl-3">
                 <h3 className="text-lg font-bold text-slate-800 sm:text-xl">{category.title}</h3>
                 <Link 
                   href={`/products/${category.slug}`} 
-                  className="shrink-0 text-[10px] font-bold uppercase tracking-[0.1em] text-amber-600 hover:text-amber-700 transition-colors"
+                  className="shrink-0 text-[10px] font-bold uppercase tracking-[0.1em] text-blue-600 hover:text-blue-700 transition-colors"
                 >
                   View Category &rarr;
                 </Link>

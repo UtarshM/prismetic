@@ -28,16 +28,16 @@ export default async function ProductCategoryPage({ params }: { params: Promise<
       <section className="section-shell">
         <SectionTitle title="Category Highlights" />
         <div className="grid gap-4 md:grid-cols-3">
-          <div className="premium-card p-6 text-sm text-slate-600 hover:border-amber-500/25">
-            <span className="text-amber-600 font-bold font-mono mr-2">&bull;</span>
+          <div className="premium-card p-6 text-sm text-slate-600 hover:border-blue-500/25">
+            <span className="text-blue-600 font-bold font-mono mr-2">&bull;</span>
             {category.items.length} machine variants in this category.
           </div>
-          <div className="premium-card p-6 text-sm text-slate-600 hover:border-amber-500/25">
-            <span className="text-amber-600 font-bold font-mono mr-2">&bull;</span>
+          <div className="premium-card p-6 text-sm text-slate-600 hover:border-blue-500/25">
+            <span className="text-blue-600 font-bold font-mono mr-2">&bull;</span>
             Original Prismtec machine content and images retained.
           </div>
-          <div className="premium-card p-6 text-sm text-slate-600 hover:border-amber-500/25">
-            <span className="text-amber-600 font-bold font-mono mr-2">&bull;</span>
+          <div className="premium-card p-6 text-sm text-slate-600 hover:border-blue-500/25">
+            <span className="text-blue-600 font-bold font-mono mr-2">&bull;</span>
             Inquiry and quote workflow mapped to specific machines.
           </div>
         </div>
@@ -59,7 +59,7 @@ export default async function ProductCategoryPage({ params }: { params: Promise<
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/5 to-transparent pointer-events-none" />
                 </div>
-                <h3 className="mt-3.5 text-sm font-bold text-slate-800 group-hover:text-amber-700 transition-colors">
+                <h3 className="mt-3.5 text-sm font-bold text-slate-800 group-hover:text-blue-700 transition-colors">
                   {item.title}
                 </h3>
                 <p className="mt-1.5 text-xs leading-relaxed text-slate-500 line-clamp-3">
@@ -75,12 +75,12 @@ export default async function ProductCategoryPage({ params }: { params: Promise<
         <SectionTitle title="Machine Detail Cards" />
         <div className="grid gap-4 md:grid-cols-2">
           {category.items.map((item) => (
-            <div key={item.id} className="premium-card p-6 border-l-2 border-l-amber-600 hover:border-amber-500/20">
+            <div key={item.id} className="premium-card p-6 border-l-2 border-l-blue-600 hover:border-blue-500/20">
               <h4 className="mb-3 text-sm font-bold text-slate-800">{item.title}</h4>
               <ul className="space-y-2 text-xs text-slate-500">
                 {item.points.slice(0, 10).map((pt) => (
                   <li key={pt} className="flex items-start gap-2">
-                    <span className="text-amber-600 mt-0.5">&bull;</span>
+                    <span className="text-blue-600 mt-0.5">&bull;</span>
                     <span>{pt}</span>
                   </li>
                 ))}
@@ -93,22 +93,22 @@ export default async function ProductCategoryPage({ params }: { params: Promise<
       <section className="section-shell pt-0">
         <SectionTitle title="Inquiry Form" />
         <form className="premium-card grid gap-4 p-6 sm:p-8 md:grid-cols-2 bg-slate-50/40 relative overflow-hidden">
-          <div className="absolute right-0 top-0 h-32 w-32 bg-amber-500/5 rounded-full blur-2xl pointer-events-none" />
+          <div className="absolute right-0 top-0 h-32 w-32 bg-blue-500/5 rounded-full blur-2xl pointer-events-none" />
           
           <input 
-            className="rounded-xl border border-slate-200 bg-white p-3 text-xs text-slate-800 placeholder:text-slate-450 focus:outline-none focus:border-amber-500/40 transition-colors" 
+            className="rounded-xl border border-slate-200 bg-white p-3 text-xs text-slate-800 placeholder:text-slate-450 focus:outline-none focus:border-blue-500/40 transition-colors" 
             placeholder="Name" 
           />
           <input 
-            className="rounded-xl border border-slate-200 bg-white p-3 text-xs text-slate-800 placeholder:text-slate-450 focus:outline-none focus:border-amber-500/40 transition-colors" 
+            className="rounded-xl border border-slate-200 bg-white p-3 text-xs text-slate-800 placeholder:text-slate-450 focus:outline-none focus:border-blue-500/40 transition-colors" 
             placeholder="Email" 
           />
           <input 
-            className="rounded-xl border border-slate-200 bg-white p-3 text-xs text-slate-800 placeholder:text-slate-450 focus:outline-none focus:border-amber-500/40 transition-colors" 
+            className="rounded-xl border border-slate-200 bg-white p-3 text-xs text-slate-800 placeholder:text-slate-450 focus:outline-none focus:border-blue-500/40 transition-colors" 
             placeholder="Phone" 
           />
           <select 
-            className="rounded-xl border border-slate-200 bg-white p-3 text-xs text-slate-500 focus:outline-none focus:border-amber-500/40 transition-colors" 
+            className="rounded-xl border border-slate-200 bg-white p-3 text-xs text-slate-500 focus:outline-none focus:border-blue-500/40 transition-colors" 
             defaultValue=""
           >
             <option value="" disabled className="text-slate-400">Select machine</option>
@@ -120,7 +120,7 @@ export default async function ProductCategoryPage({ params }: { params: Promise<
           </select>
           
           <textarea 
-            className="md:col-span-2 rounded-xl border border-slate-200 bg-white p-3 text-xs text-slate-800 placeholder:text-slate-450 focus:outline-none focus:border-amber-500/40 transition-colors h-28 resize-none" 
+            className="md:col-span-2 rounded-xl border border-slate-200 bg-white p-3 text-xs text-slate-800 placeholder:text-slate-450 focus:outline-none focus:border-blue-500/40 transition-colors h-28 resize-none" 
             placeholder="Requirement Details" 
           />
           
@@ -139,7 +139,7 @@ export default async function ProductCategoryPage({ params }: { params: Promise<
               href={`/products/${x.slug}`} 
               className="premium-card p-5 text-center group flex items-center justify-center min-h-[80px]"
             >
-              <span className="text-xs font-bold text-slate-600 group-hover:text-amber-700 transition-colors">
+              <span className="text-xs font-bold text-slate-600 group-hover:text-blue-700 transition-colors">
                 {x.title}
               </span>
             </Link>

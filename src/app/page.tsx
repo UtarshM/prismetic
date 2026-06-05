@@ -17,16 +17,16 @@ import {
 } from "lucide-react";
 
 const industryIconMap: Record<string, React.ReactNode> = {
-  pharmaceutical: <Pill className="h-6 w-6 text-amber-600" />,
-  "food-beverage": <GlassWater className="h-6 w-6 text-amber-600" />,
-  cosmetics: <Sparkles className="h-6 w-6 text-amber-600" />,
-  "personal-care": <Heart className="h-6 w-6 text-amber-600" />,
-  dairy: <GlassWater className="h-6 w-6 text-amber-600" />,
-  "home-care": <Leaf className="h-6 w-6 text-amber-600" />,
-  lubricants: <Droplets className="h-6 w-6 text-amber-600" />,
-  agrochemical: <Leaf className="h-6 w-6 text-amber-600" />,
-  nutraceutical: <Pill className="h-6 w-6 text-amber-600" />,
-  chemical: <Droplets className="h-6 w-6 text-amber-600" />,
+  pharmaceutical: <Pill className="h-6 w-6 text-blue-600" />,
+  "food-beverage": <GlassWater className="h-6 w-6 text-blue-600" />,
+  cosmetics: <Sparkles className="h-6 w-6 text-blue-600" />,
+  "personal-care": <Heart className="h-6 w-6 text-blue-600" />,
+  dairy: <GlassWater className="h-6 w-6 text-blue-600" />,
+  "home-care": <Leaf className="h-6 w-6 text-blue-600" />,
+  lubricants: <Droplets className="h-6 w-6 text-blue-600" />,
+  agrochemical: <Leaf className="h-6 w-6 text-blue-600" />,
+  nutraceutical: <Pill className="h-6 w-6 text-blue-600" />,
+  chemical: <Droplets className="h-6 w-6 text-blue-600" />,
 };
 
 export default function HomePage() {
@@ -44,7 +44,7 @@ export default function HomePage() {
       <section className="section-shell">
         <SectionTitle title="About Prismtec" link="/about" />
         <div className="premium-card p-6 sm:p-10 relative overflow-hidden">
-          <div className="absolute right-0 top-0 h-40 w-40 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute right-0 top-0 h-40 w-40 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
           <p className="max-w-5xl text-sm leading-relaxed text-slate-600 sm:text-base sm:leading-relaxed">
             {migrated.aboutParagraphs[0]}
           </p>
@@ -61,17 +61,17 @@ export default function HomePage() {
               className="premium-card p-6 group flex flex-col justify-between"
             >
               <div>
-                <div className="mb-4 inline-flex rounded-xl bg-amber-500/5 p-2.5 border border-amber-500/10">
-                  <Layers size={18} className="text-amber-600" />
+                <div className="mb-4 inline-flex rounded-xl bg-blue-500/5 p-2.5 border border-blue-500/10">
+                  <Layers size={18} className="text-blue-600" />
                 </div>
-                <h3 className="text-base font-bold text-slate-800 group-hover:text-amber-700 transition-colors">
+                <h3 className="text-base font-bold text-slate-800 group-hover:text-blue-700 transition-colors">
                   {category.title}
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate-500 line-clamp-2">
                   {category.summary}
                 </p>
               </div>
-              <p className="mt-5 text-[10px] font-mono font-bold text-amber-600 uppercase tracking-wider flex items-center gap-1">
+              <p className="mt-5 text-[10px] font-mono font-bold text-blue-600 uppercase tracking-wider flex items-center gap-1">
                 {category.items.length} Machine Models &rarr;
               </p>
             </Link>
@@ -99,7 +99,7 @@ export default function HomePage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/5 to-transparent pointer-events-none" />
                 </div>
-                <p className="mt-3.5 text-sm font-bold text-slate-800 group-hover:text-amber-700 transition-colors line-clamp-1">
+                <p className="mt-3.5 text-sm font-bold text-slate-800 group-hover:text-blue-700 transition-colors line-clamp-1">
                   {machine.title}
                 </p>
               </div>
@@ -117,12 +117,12 @@ export default function HomePage() {
           {industries.map((ind) => (
             <div 
               key={ind.slug} 
-              className="premium-card p-6 text-center hover:border-amber-500/20 group"
+              className="premium-card p-6 text-center hover:border-blue-500/20 group"
             >
-              <div className="mx-auto mb-3 inline-flex rounded-full bg-amber-500/5 p-3.5 border border-amber-500/10 group-hover:bg-amber-500/10 transition duration-300">
-                {industryIconMap[ind.slug] || <Cpu className="h-6 w-6 text-amber-600" />}
+              <div className="mx-auto mb-3 inline-flex rounded-full bg-blue-500/5 p-3.5 border border-blue-500/10 group-hover:bg-blue-500/10 transition duration-300">
+                {industryIconMap[ind.slug] || <Cpu className="h-6 w-6 text-blue-600" />}
               </div>
-              <p className="text-xs font-bold text-slate-700 group-hover:text-amber-700 transition-colors">
+              <p className="text-xs font-bold text-slate-700 group-hover:text-blue-700 transition-colors">
                 {ind.name}
               </p>
             </div>
@@ -167,31 +167,31 @@ export default function HomePage() {
       <section className="section-shell pt-0">
         <SectionTitle title="Why Choose Us" />
         <div className="grid gap-6 md:grid-cols-3">
-          <div className="premium-card p-8 bg-gradient-to-b from-white to-slate-50/60 hover:border-amber-500/20 group">
-            <div className="mb-4 inline-flex rounded-xl bg-amber-500/5 p-2.5 border border-amber-500/10 group-hover:bg-amber-500/10 transition duration-300">
-              <Cpu size={18} className="text-amber-600" />
+          <div className="premium-card p-8 bg-gradient-to-b from-white to-slate-50/60 hover:border-blue-500/20 group">
+            <div className="mb-4 inline-flex rounded-xl bg-blue-500/5 p-2.5 border border-blue-500/10 group-hover:bg-blue-500/10 transition duration-300">
+              <Cpu size={18} className="text-blue-600" />
             </div>
-            <div className="text-[10px] font-bold font-mono text-amber-700 mb-2 tracking-wider">01 / ENGINEERING</div>
+            <div className="text-[10px] font-bold font-mono text-blue-700 mb-2 tracking-wider">01 / ENGINEERING</div>
             <h4 className="text-base font-bold text-slate-800 mb-2">Engineering-First Design</h4>
             <p className="text-xs leading-relaxed text-slate-500">
               Process-grade reliability with heavy-duty components designed for sustained high-speed operations.
             </p>
           </div>
-          <div className="premium-card p-8 bg-gradient-to-b from-white to-slate-50/60 hover:border-amber-500/20 group">
-            <div className="mb-4 inline-flex rounded-xl bg-amber-500/5 p-2.5 border border-amber-500/10 group-hover:bg-amber-500/10 transition duration-300">
-              <Zap size={18} className="text-amber-600" />
+          <div className="premium-card p-8 bg-gradient-to-b from-white to-slate-50/60 hover:border-blue-500/20 group">
+            <div className="mb-4 inline-flex rounded-xl bg-blue-500/5 p-2.5 border border-blue-500/10 group-hover:bg-blue-500/10 transition duration-300">
+              <Zap size={18} className="text-blue-600" />
             </div>
-            <div className="text-[10px] font-bold font-mono text-amber-700 mb-2 tracking-wider">02 / COMPLIANCE</div>
+            <div className="text-[10px] font-bold font-mono text-blue-700 mb-2 tracking-wider">02 / COMPLIANCE</div>
             <h4 className="text-base font-bold text-slate-800 mb-2">Quality & Scalability</h4>
             <p className="text-xs leading-relaxed text-slate-500">
               Built to conform with strict regulatory standards (FDA, GMP, CE) with full batch tracking capabilities.
             </p>
           </div>
-          <div className="premium-card p-8 bg-gradient-to-b from-white to-slate-50/60 hover:border-amber-500/20 group">
-            <div className="mb-4 inline-flex rounded-xl bg-amber-500/5 p-2.5 border border-amber-500/10 group-hover:bg-amber-500/10 transition duration-300">
-              <Globe size={18} className="text-amber-600" />
+          <div className="premium-card p-8 bg-gradient-to-b from-white to-slate-50/60 hover:border-blue-500/20 group">
+            <div className="mb-4 inline-flex rounded-xl bg-blue-500/5 p-2.5 border border-blue-500/10 group-hover:bg-blue-500/10 transition duration-300">
+              <Globe size={18} className="text-blue-600" />
             </div>
-            <div className="text-[10px] font-bold font-mono text-amber-700 mb-2 tracking-wider">03 / SERVICE</div>
+            <div className="text-[10px] font-bold font-mono text-blue-700 mb-2 tracking-wider">03 / SERVICE</div>
             <h4 className="text-base font-bold text-slate-800 mb-2">Global Lifecycle Support</h4>
             <p className="text-xs leading-relaxed text-slate-500">
               Comprehensive service from design qualification to installations and rapid spare part supply chains.
@@ -207,15 +207,15 @@ export default function HomePage() {
           <p className="text-sm leading-relaxed text-slate-600 italic relative z-10 sm:text-base sm:leading-relaxed">
             &ldquo;Prismtec has consistently delivered robust machinery and responsive engineering support for our line expansion goals. Their servo filling systems are second to none.&rdquo;
           </p>
-          <div className="mt-6 border-l-2 border-amber-600 pl-4 font-mono text-[10px] uppercase tracking-wider text-slate-500">
+          <div className="mt-6 border-l-2 border-blue-600 pl-4 font-mono text-[10px] uppercase tracking-wider text-slate-500">
             Production Director, Global Lubricants Leader
           </div>
         </div>
       </section>
 
       <section className="section-shell pt-0 pb-12">
-        <div className="flex flex-wrap items-center justify-between gap-6 rounded-3xl border border-amber-500/15 bg-gradient-to-r from-amber-500/5 via-amber-500/2 to-slate-50/30 p-8 shadow-md relative overflow-hidden">
-          <div className="absolute right-0 top-0 h-48 w-48 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="flex flex-wrap items-center justify-between gap-6 rounded-3xl border border-blue-500/15 bg-gradient-to-r from-blue-500/5 via-blue-500/2 to-slate-50/30 p-8 shadow-md relative overflow-hidden">
+          <div className="absolute right-0 top-0 h-48 w-48 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
           <div>
             <h3 className="text-base font-bold text-slate-900 sm:text-xl">Any Queries? Talk to our sales team today.</h3>
             <p className="mt-1 text-xs text-slate-500">Consult with our engineering team for custom line deployments.</p>

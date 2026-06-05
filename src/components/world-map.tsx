@@ -19,7 +19,7 @@ export function WorldMap({ markers }: { markers: Marker[] }) {
             animate={{ scale: [0.8, 1.25, 0.8], opacity: [0.6, 1, 0.6] }}
             transition={{ duration: 2.2, repeat: Infinity }}
           >
-            <div className="h-3 w-3 rounded-full bg-amber-300 shadow-[0_0_20px_#d4af37]" />
+            <div className="h-3 w-3 rounded-full bg-red-600 shadow-[0_0_20px_#e31e24]" />
             <span className="ml-2 whitespace-nowrap text-xs text-slate-700">{m.country}</span>
           </motion.div>
         ))}

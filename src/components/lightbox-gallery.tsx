@@ -15,7 +15,7 @@ export function LightboxGallery({ categories }: { categories: CategoryMap }) {
     <>
       <div className="mb-4 flex flex-wrap gap-2">
         {keys.map((k) => (
-          <button key={k} className={`rounded-full border px-4 py-2 text-sm ${active === k ? "border-amber-300 text-amber-300" : "border-slate-300 text-slate-600"}`} onClick={() => setActive(k)}>
+          <button key={k} className={`rounded-full border px-4 py-2 text-sm ${active === k ? "border-blue-600 text-blue-600" : "border-slate-300 text-slate-600"}`} onClick={() => setActive(k)}>
             {k}
           </button>
         ))}

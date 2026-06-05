@@ -17,7 +17,7 @@ export default function ClientsPage() {
       <Hero title="Client Portfolio" subtitle="Premium logo showcase from Prismtec installations and industry partners." />
       <section className="mx-auto max-w-7xl px-6 py-16">
         <SectionTitle title="Filters" />
-        <div className="mb-8 flex flex-wrap gap-2">{filters.map((f) => <button key={f} onClick={() => setActive(f)} className={`rounded-full border px-4 py-2 ${active === f ? "border-amber-300 text-amber-300" : "border-slate-300 text-slate-600"}`}>{f}</button>)}</div>
+        <div className="mb-8 flex flex-wrap gap-2">{filters.map((f) => <button key={f} onClick={() => setActive(f)} className={`rounded-full border px-4 py-2 ${active === f ? "border-blue-600 text-blue-600" : "border-slate-300 text-slate-600"}`}>{f}</button>)}</div>
         <div className="grid gap-3 grid-cols-3 md:grid-cols-6">
           {logos.map((logo) => (
             <div key={logo} className="rounded-lg border border-slate-200 bg-white p-3">
